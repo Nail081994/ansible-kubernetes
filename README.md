@@ -13,9 +13,9 @@ Requirements
 Role Variables
 --------------
 
-`kubeadm_version` # versisn of kubeadm to install
-`kubectl_version` # version of kubectl to install
-`kubelet_version` # version of kubelet to install
+- `kubeadm_version` # versisn of kubeadm to install
+- `kubectl_version` # version of kubectl to install
+- `kubelet_version` # version of kubelet to install
 
 Example Playbook
 ----------------

@@ -76,13 +76,13 @@
 
           - name: Install kubelet
             ansible.builtin.apt:
-                    name: kubelet=1.24.2-00
+                    name: "kubelet={{  kubelet_version  }}"
                     state: present
                     update_cache: true
 
           - name: Install kubeadm
             ansible.builtin.apt:
-                    name: kubeadm=1.24.2-00
+                    name: "kubeadm={{  kubeadm_version  }}"
                     state: present
                     update_cache: true
 
@@ -96,6 +96,6 @@
   tasks:
           - name: Install kubectl
             ansible.builtin.apt:
-                    name: kubectl=1.24.2-00
+                    name: "kubectl={{  kubectl_verison  }}"
                     state: present
                     update_cache: true

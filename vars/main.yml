@@ -1,2 +1,8 @@
 ---
 # vars file for ansible-kubernetes
+
+# verison of kubernetes components to install
+kubectl_version: 1.24.2-00
+kubeadm_version: 1.24.2-00
+kubelet_version: 1.24.2-00
+

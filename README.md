@@ -1,38 +1,29 @@
-Role Name
+Ansible-Kubernetes Role
 =========
 
-A brief description of the role goes here.
+A simple Ansible role for deploying and initialize your K8s cluster on Linux servers.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- At least you need 1 server for master and 1 server for worker
+- Each of your server must have following resources: 2 vCPUs, 2 GB RAM
+- Ansible v2.7 or higher on your local computer which will execute Ansible-playbooks
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+`kubeadm_version` # versisn of kubeadm to install
+`kubectl_version` # version of kubectl to install
+`kubelet_version` # version of kubelet to install
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
+```yaml
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+         - { role: ansible-kubernetes.yml }
+```
